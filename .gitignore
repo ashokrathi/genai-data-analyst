@@ -1,0 +1,5 @@
+prog/*
+__pycache__
+temp_*
+x_*
+y_*

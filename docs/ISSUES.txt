@@ -1,0 +1,17 @@
+
+1. XML and Special Characters - such as &
+    When LLM returns XML response, the embedded code has '&' for 'and' condition for Dataframes. This causes XML parser to fail.
+    XML parser needs to see this as &amp;.
+    Example: us_companies = revenueDF[(revenueDF['country'] == 'United States') & (revenueDF['revenue_ttm'] > 100000000000)]
+
+    Solution: Write code to replace XML special char right after the response, and restored it back after code extraction
+        & --> (##XXREPLACE_ANDXX##)
+
+Prompt:
+show pie chart of 'United States' companies that have revenue of more than 100000000000. During inference, do the following:
+ Remove entire section of code contained in <sample_data>, and change '&' occurrence to '&amp;'
+
+2. Had issue with malformed XML in <sample_data> section. Add to the prompt to remove that section during inference. 
+
+3.
+

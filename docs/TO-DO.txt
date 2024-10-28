@@ -1,0 +1,33 @@
+To-DO Tasks
+===========
+1. (Nice-to-have) Send dimension data for better understanding of the prompt
+
+2. (Very-Nice-to-have) If no "Dimension" exists, should we query "Facts" to generate additional context?
+
+    unique(DF.colname)
+
+X 3. (Important) Human Feedback, and store the response in Pinecone DB
+
+4. (Nice-to-have) Is this the correct dataset for the user prompt?
+    - Prep: one time:
+        - Send data to LLM, and ask for 20 different related notes and prompts user can potenitally ask
+        - Put these notes into VectorDB with the DataSet tag
+    - When user fires up a query, and there is very low semantic score matching the currently selected dataset:
+            - prompt user to check the dataset
+            - Also ask them if they want to continue
+
+X 5. (Nice-to-have) Show user prompt in the Results
+
+6. (Useful) Show metadata info - Table names, column names.
+
+7. (Nice-to-have) Convert Data config into YAML format.
+
+
+
+Prompt enhancements:
+====================
+- For pie charts, only use positive values.
+    (Fixes for negative values for the Pie chart)
+- Upon inference, exclude <sample_data> section in the response.
+    (Fixes some XML issues)
+- 
