@@ -1,0 +1,15 @@
+[Facts],dividendYieldDF,Companies_ranked_by_Dividend_Yield.csv,"Dividend-yield dividend yield"
+[Facts],earningsDF,Companies_ranked_by_Earnings.csv,"earnings profits"
+[Facts],marketCapDF,Companies_ranked_by_Market_Cap.csv,"market-cap"
+[Facts],PE_RatioDF,Companies_ranked_by_P_E_ratio.csv,"PE PE-ratio"
+[Facts],revenueDF,Companies_ranked_by_Revenue.csv,"revenue"
+[Columns],dividendYieldDF,Rank,Name,Symbol,dividend_yield_ttm,price_GPB,country
+[Columns],earningsDF,Rank,Name,Symbol,earnings_ttm,price_GPB,country
+[Columns],marketCapDF,Rank,Name,Symbol,marketcap,price_GPB,country
+[Columns],PE_RatioDF,Rank,Name,Symbol,pe_ratio_ttm,price_GPB,country
+[Columns],revenueDF,Rank,Name,Symbol,revenue_ttm,price_GPB,country
+#[ExtraCommentsToLLM],Use given mapping between,Dataframe and columns.
+#[ExtraCommentsToLLM],Strictly use given dataframe names and column names for PD.
+#[VirtualDimension],revenueDF,List of countries names,['country'].unique()
+#[VirtualDimension],revenueDF,List of specific company names,['Name'].unique()
+#[VirtualDimension],revenueDF,List of stock symbols,['Symbol'].unique()

@@ -1,0 +1,4 @@
+[Facts],retailSalesDF,retail_sales_dataset.csv,"sales transactions"
+[Columns],retailSalesDF,Transaction_ID,Date,Customer_ID,Gender,Age,Product_Category,Quantity,Price_per_Unit,Total_Amount
+#[ExtraCommentsToLLM],Use given mapping between,Dataframe and columns.
+#[ExtraCommentsToLLM],Strictly use given dataframe names and column names for PD.

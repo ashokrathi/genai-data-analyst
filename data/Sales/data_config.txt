@@ -1,0 +1,12 @@
+[Facts],salesDF,sales.csv,"sales transactions"
+[Dimensions],regionsDF,regions.csv,"regions areas zones regional"
+[Dimensions],agentsDF,agents.csv,"agents reps representatives"
+[Dimensions],customersDF,customers.csv,"customers clients"
+[Dimensions],productsDF,products.csv,"products items"
+[Columns],salesDF,sales_id,date,region_id,agent_id,customer_id,product_id,quantity,unit_price,amount
+[Columns],regionsDF,region_id,region_name
+[Columns],agentsDF,agent_id,agent_name
+[Columns],customersDF,customer_id,customer_name
+[Columns],productsDF,product_id,upc,product_name
+#[ExtraCommentsToLLM],Use given mapping between,Dataframe and columns.
+#[ExtraCommentsToLLM],Strictly use given dataframe names and column names for PD.
