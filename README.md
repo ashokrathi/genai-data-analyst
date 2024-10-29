@@ -3,12 +3,12 @@ Based on Text or Voice prompt, this GenAI Data Analyst tool invokes LLM to gener
 
 ## Features.
 1. Takes voice prompt or text prompt from the user.
-2. Augments this prompt (RAG) with additional context including meta-data info about the user-selected dataset.
-3. Sends this context + prompt to the LLM for code generation.
-4. Returned response from LLM is parsed using XML parser. Response should contain Pandas and Matplotlib code.
-5. Tool replaces relevant Pandas code to create Dataframe(s). Tool also replaces some undesirable strings contained in the response.
-6. These dataframes that contain private data are used by Matplotlib to generate Bar Chart/Pie Charts etc.
-7. A complete Streamlit App file is generated, and launched to display charts/graphs etc.
+2. Augments this user prompt (RAG) with additional context including meta-data info about the user-selected dataset.
+3. Sends this context + user prompt to the LLM for code generation.
+4. Parses the LLM response using simple XML parser. Response should contain Pandas and Matplotlib code.
+5. Edits relevant sections of the Pandas code to create Dataframe(s) using private data.
+6. Newly created dataframes with private data are used by Matplotlib to generate Bar Chart/Pie Charts etc.
+7. Complete Streamlit App code is generated into file which is then launched to display charts/graphs etc.
 8. Tool also seeks human feedback for the quality of charts/graphs based on the prompt.
 
 ## Libraries/Technolgies Used
