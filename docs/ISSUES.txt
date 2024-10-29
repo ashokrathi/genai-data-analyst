@@ -13,5 +13,8 @@ show pie chart of 'United States' companies that have revenue of more than 10000
 
 2. Had issue with malformed XML in <sample_data> section. Add to the prompt to remove that section during inference. 
 
-3.
+3. (Error) When User Prompt has line-break, st.header() fails in the generated Python code.
+Solution: Make sure User prompt is created as one line. That means we need to combine multiple lines into one.
+
+4.
 
