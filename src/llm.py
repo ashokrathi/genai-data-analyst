@@ -3,7 +3,6 @@ import openai
 from langchain_openai import OpenAI
 from langchain.output_parsers import XMLOutputParser
 from langchain_core.prompts import PromptTemplate
-from app_config import OPENAI_API_KEY
 from utils.parseXMLutil import parseXML
 from loguru import logger
 import os
