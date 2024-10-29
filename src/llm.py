@@ -6,11 +6,22 @@ from langchain_core.prompts import PromptTemplate
 from app_config import OPENAI_API_KEY
 from utils.parseXMLutil import parseXML
 from loguru import logger
+import os
+import sys
 
 def prompt_langchain(prompt_str):
     # chain = prompt | model | parser
     #parser = XMLOutputParser()
-    model = OpenAI(api_key = OPENAI_API_KEY)
+    
+    openai_api_key = os.getenv('OPENAI_API_KEY')
+    if not openai_api_key:
+        err_msg = "OPENAI_API_KEY is not configured in the OS Environment, so cannot connect to the OpenAI server. You must create an OpenAI account and get API key to continue. Exiting..."
+        #logger.error(err_msg)
+        st.sidebar.error(err_msg)
+        st.sidebar.write("ERROR: OpenAI Key not in environment.")
+        return
+
+    model = OpenAI(api_key = openai_api_key)
     chain = model
     output = chain.invoke(prompt_str)
     if output:
@@ -22,7 +33,15 @@ def prompt_langchain(prompt_str):
 
 def prompt_openai(prompt_str):
     model="gpt-4o-mini"
-    client = openai.OpenAI(api_key = OPENAI_API_KEY)
+
+    openai_api_key = os.getenv('OPENAI_API_KEY')
+    if not openai_api_key:
+        err_msg = "OPENAI_API_KEY is not configured in the OS Environment, so cannot connect to the OpenAI server. You must create an OpenAI account and get API key to continue..."
+        logger.critical(err_msg)
+        st.sidebar.error(err_msg)
+        return ""
+
+    client = openai.OpenAI(api_key = openai_api_key)
     messages = [{"role": "user", "content": prompt_str}]
     response = client.chat.completions.create(
         model=model,
