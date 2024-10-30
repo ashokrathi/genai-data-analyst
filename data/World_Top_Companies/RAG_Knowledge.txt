@@ -1,0 +1,4 @@
+Use this for ranking of company's around the world in different countries across financial metrics, such as, revenue, dividend, dividend yield, earnings, profits, PE ratio, market cap, stock symbols.
+Top or best N companies by revenue or profit or PE ratio or market cap or dividend
+Bottom or worst N companies by revenue or profit or PE ratio or market cap or dividend
+Companies in the "United States" or "China" by revenue or profit or PE ratio or market cap or dividend
