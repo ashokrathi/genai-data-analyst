@@ -5,7 +5,7 @@ PYTHON_PROG_DIR = "prog"
 ##########
 # Additional Messages to enhance the prompt
 ##########
-PROMPT_GOAL = "Goal: Generate Pandas and Matlibplot code."
+PROMPT_GOAL = "Goal: Generate Pandas and Matlibplot code. Do NOT use or generate any sample data!"
 PROMPT_COLORS = "Use Color Palette: red, green, blue, pink, yellow"
 PROMPT_DATAFRAME_HEADERMSG = "Here are dataframes with respective column names:"
 PROMPT_CODEGEN_MSG = "Make sure Python code has no errors. Make matplotlib code compatible with streamlit app. Make sure matplotlib and streamlit libraries are imported."

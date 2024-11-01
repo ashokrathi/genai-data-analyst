@@ -46,7 +46,7 @@ with col_2:
     st.write("")
     st.write("")
     st.write("{} / {} / {}")
-""".format(prompt_txt, dataset_name, only_temp_file_part, formatted_time)
+""".format(prompt_txt.replace("\n",""), dataset_name, only_temp_file_part, formatted_time)
 
         f.write(meta_info)
 

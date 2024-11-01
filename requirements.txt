@@ -6,7 +6,8 @@ loguru==0.7.2
 matplotlib==3.9.2
 openai==1.52.2
 pandas==2.2.3
-Pillow==11.0.0
+Pillow==10.4.0
 SpeechRecognition==3.10.4
 streamlit==1.39.0
 pyyaml==6.0.1
+pyaudio==0.2.14
