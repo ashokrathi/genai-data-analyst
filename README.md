@@ -26,3 +26,23 @@ Note: This is still work-in-progress.
 
 ## Tool Diagram
 ![Diagram for Voice-Enabled Data Analyst Tool](docs/diagram-voice-enabled-data-analyst.png)
+
+# Setup Insructions
+## If you want to enable Speech2Text functionality (Optional)
+1. Install portaudio
+    Linux (as sudo):
+        $ sudo apt-get install portaudio19-dev python-all-dev
+    Mac:
+        $ brew install portaudio
+2. Then install PyAudio python library
+    $ pip install pyaudio
+## Install Python libraries
+    $ cd <your_folder>/genai-data-analyst
+    $ pip install -r requirements.txt
+## Run the App
+    $ bash ./run_app.sh
+
+    Note 1: You can use 'Sales' or 'World_Top_Companies' dataset. Select one of them in the App.
+    Note 2: You can provide textual prompt. For example:
+            Dataset = Sales
+            Prompt = Generate bar-chart for top 5 agents by sales.
