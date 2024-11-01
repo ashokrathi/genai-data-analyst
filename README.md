@@ -29,13 +29,15 @@ Note: This is still work-in-progress.
 
 # Setup Insructions
 ## If you want to enable Speech2Text functionality (Optional)
-1. Install portaudio
-    Linux (as sudo):
-        $ sudo apt-get install portaudio19-dev python-all-dev
-    Mac:
-        $ brew install portaudio
-2. Then install PyAudio python library
-    $ pip install pyaudio
+    1. Install portaudio
+        On Linux (as sudo):
+           $ sudo apt-get install portaudio19-dev python-all-dev
+        Mac:
+           $ brew install portaudio
+
+    2. Then install PyAudio python library
+        $ pip install pyaudio
+
 ## Install Python libraries
     $ cd <your_folder>/genai-data-analyst
     $ pip install -r requirements.txt
@@ -46,3 +48,5 @@ Note: This is still work-in-progress.
     Note 2: You can provide textual prompt. For example:
             Dataset = Sales
             Prompt = Generate bar-chart for top 5 agents by sales.
+    Note 3: After you submit your prompt, you would see a new browser page for the Results showing bar-charts etc.
+    Note 4: You may see some strange interaction with the browser. Reason is Streamlit Apps are event-driven, and any change causes the entire App to run from start to finish.
