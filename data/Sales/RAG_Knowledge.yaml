@@ -1,73 +1,74 @@
 ###
 # Knowledge base for the dataset  in YAML format
+# Use "a" as prefix for the IDs to maintain uniqueness
 ###
 knowledge:
   dataset_name: Sales
   records:
     # Agents
-    - id: 1.1
+    - id: a.1.1
       text: Top or best agents or reps by sales or transactions
-    - id: 1.2
+    - id: a.1.2
       text: Leading agents based on sales performance.
-    - id: 1.3
+    - id: a.1.3
       text: Highest-performing sales representatives.
-    - id: 1.4
+    - id: a.1.4
       text: Top-selling agents in terms of revenue.
-    - id: 1.5
+    - id: a.1.5
       text: Best sales reps ranked by sales figures.
-    - id: 1.6
+    - id: a.1.6
       text: Elite agents distinguished by their sales success.
 
     # Regions
-    - id: 2.1
+    - id: a.2.1
       text: Top or best regions by sales or transactions
-    - id: 2.2
+    - id: a.2.2
       text: Leading regions based on sales volume.
-    - id: 2.3
+    - id: a.2.3
       text: Highest-performing areas by transaction count.
-    - id: 2.4
+    - id: a.2.4
       text: Top regions ranked by revenue generated.
-    - id: 2.5
+    - id: a.2.5
       text: Best-performing regions in terms of sales transactions.
-    - id: 2.6
+    - id: a.2.6
       text: Elite areas distinguished by their sales success.
 
     # Customers
-    - id: 3.1
+    - id: a.3.1
       text: Top or best customers by sales or transactions
-    - id: 3.2
+    - id: a.3.2
       text: Leading customers based on sales figures.
-    - id: 3.3
+    - id: a.3.3
       text: Highest-performing clients in terms of transactions.
-    - id: 3.4
+    - id: a.3.4
       text: Top cuåstomers ranked by revenue generated.
-    - id: 3.5
+    - id: a.3.5
       text: Best clients distinguished by their purchase volume.
-    - id: 3.6
+    - id: a.3.6
       text: Elite customers noted for their sales contributions.
 
     # Products
-    - id: 4.1
+    - id: a.4.1
       text: Top or best products by sales or transactions
-    - id: 4.2
+    - id: a.4.2
       text: Leading products based on sales volume.
-    - id: 4.3
+    - id: a.4.3
       text: Highest-performing items in terms of transactions.
-    - id: 4.4
+    - id: a.4.4
       text: Top-selling products ranked by revenue generated.
-    - id: 4.5
+    - id: a.4.5
       text: Best products distinguished by their sales figures.
-    - id: 4.6
+    - id: a.4.6
       text: Elite items noted for their sales success.
-    - id: 4.7
+    - id: a.4.7
       text: Top or best products or items by sales or transactions
 
     # By Timeframe
-    - id: 5.1
+    - id: a.5.1
       text: Total Sales or transactions by year or month or weeks, days or date
-    - id: 5.2
+    - id: a.5.2
       text: Yearly Sales
-    - id: 5.3
+    - id: a.5.3
       text: Monthly Sales
-    - id: 5.4
+    - id: a.5.4
       text: Weekly Sales

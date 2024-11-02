@@ -1,6 +1,10 @@
 DATA_DIR = "data"
 MIC_IMAGE_FILE  = 'resources/mic_icon.png'
 usr_prompt_txt_key = 'User_Prompt'
+PINECONE_INDEX = "ik-capstone"
+RAG_META_YAML_FILENAME = "RAG_Knowledge.yaml"
+NAMESPACE_METADATA = "meta_ds"
+QUALITY_THRESHOLD="0.7"
 PYTHON_PROG_DIR = "prog"
 ##########
 # Additional Messages to enhance the prompt
@@ -13,7 +17,7 @@ PROMPT_XMLFORMAT_HEADERMSG = "Generate response only in XML format as below."
 
 PROMPT_XMLTAGS = """<root>
 <prompt_id>
-123455
+#PromptID=123455
 </prompt_id>
 <sample_data>
 Sample data goes here...

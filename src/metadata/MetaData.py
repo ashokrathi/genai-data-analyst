@@ -124,7 +124,7 @@ class MetaData:
     ###
     # Search in both Facts and Dimensions for
     # the filename corresponding to the input Dataframe
-    # Return: filename with the path
+    # Return: filename without the path
     ###
     def get_filename_without_path(self, df_name):
         for fact_kv in self.facts:

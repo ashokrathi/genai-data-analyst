@@ -1,82 +1,92 @@
 ###
 # Knowledge base for the dataset  in YAML format
+# Use "b" as prefix for the IDs to maintain uniqueness
 ###
 knowledge:
   dataset_name: World_Top_Companies
   records:
-    - id: 1.1
+    - id: b.1.1
       text: Dividend Yield - Companies_ranked_by_Dividend_Yield.csv with columns for rank, name, symbol, dividend yield, price in GBP, and country.
-    - id: 1.2
+    - id: b.1.2
       text: Earnings - Companies_ranked_by_Earnings.csv with columns for rank, name, symbol, earnings, price in GBP, and country.
-    - id: 1.3
+    - id: b.1.3
       text: Market Capitalization - Companies_ranked_by_Market_Cap.csv with columns for rank, name, symbol, market cap, price in GBP, and country.
-    - id: 1.4
+    - id: b.1.4
       text: PE Ratio - Companies_ranked_by_P_E_ratio.csv with columns for rank, name, symbol, PE ratio, price in GBP, and country.
-    - id: 1.5
+    - id: b.1.5
       text: Revenue - Companies_ranked_by_Revenue.csv with columns for rank, name, symbol, revenue, price in GBP, and country.
 
-    - id: 2.1
+    - id: b.2.1
       text: Top or best or highest N companies by revenue or profit or PE ratio or market cap or dividend
-    - id: 2.2
+    - id: b.2.2
       text: Ranking the highest companies based on revenue, profit, PE ratio, market capitalization, or dividends.
-    - id: 2.3
+    - id: b.2.3
       text: Identifying the top firms by key metrics such as revenue, profit, PE ratio, market cap, and dividends.
-    - id: 2.4
+    - id: b.2.4
       text: Listing the best companies according to their revenue, profit, market cap, PE ratio, and dividend performance.
-    - id: 2.5
+    - id: b.2.5
       text: Highlighting the leading companies ranked by revenue, profit, dividend yield, PE ratio, or market capitalization.
-    - id: 2.6
+    - id: b.2.6
       text: Evaluating the highest N companies across financial metrics like revenue, profit, market cap, PE ratio, and dividends.
 
-    - id: 3.1
+    - id: b.3.1
       text: Bottom or worst N companies by revenue or profit or PE ratio or market cap or dividend
-    - id: 3.2
+    - id: b.3.2
       text: Ranking the lowest-performing companies based on revenue, profit, PE ratio, market capitalization, or dividends.
-    - id: 3.3
+    - id: b.3.3
       text: Identifying the bottom firms by key metrics such as revenue, profit, PE ratio, market cap, and dividends.
-    - id: 3.4
+    - id: b.3.4
       text: Listing the worst companies according to their revenue, profit, market cap, PE ratio, and dividend performance.
-    - id: 3.5
+    - id: b.3.5
       text: Highlighting the lowest N companies ranked by revenue, profit, dividend yield, PE ratio, or market capitalization.
-    - id: 3.6
+    - id: b.3.6
       text: Evaluating the bottom N companies across financial metrics like revenue, profit, market cap, PE ratio, and dividends.
 
-    - id: 4.1
+    - id: b.4.1
       text: Companies in the "United States" or "China" by revenue or profit or PE ratio or market cap or dividend
-    - id: 4.2
+    - id: b.4.2
       text: Ranking companies in the United States or China based on revenue, profit, PE ratio, market capitalization, or dividends.
-    - id: 4.3
+    - id: b.4.3
       text: Identifying firms in the U.S. and China by key financial metrics such as revenue, profit, PE ratio, market cap, and dividends.
-    - id: 4.4
+    - id: b.4.4
       text: Listing companies from the United States or China according to their revenue, profit, market cap, PE ratio, and dividend performance.
-    - id: 4.5
+    - id: b.4.5
       text: Evaluating businesses in the U.S. and China by financial indicators like revenue, profit, dividend yield, PE ratio, and market capitalization.
-    - id: 4.6
+    - id: b.4.6
       text: Highlighting companies in the United States or China ranked by metrics such as revenue, profit, PE ratio, market cap, and dividends.
 
-    - id: 5.1
+    - id: b.5.1
       text: Top or best or highest N countries by average company revenue per company
-    - id: 5.2
+    - id: b.5.2
       text: Ranking the highest N countries based on average company revenue per firm.
-    - id: 5.3
+    - id: b.5.3
       text: Identifying the top countries by average revenue generated per company.
-    - id: 5.4
+    - id: b.5.4
       text: Listing the best N countries according to the average revenue per business.
-    - id: 5.5
+    - id: b.5.5
       text: Highlighting the leading countries ranked by the average revenue of companies within their borders.
-    - id: 5.6
+    - id: b.5.6
       text: Evaluating the highest N countries based on the average revenue per company across their economies.
 
-    - id: 6.1
+    - id: b.6.1
       text: Ranking company's around the world in different countries across financial metrics, such as, revenue, dividend, dividend yield, earnings, profits, PE ratio, market cap, stock symbols.
-    - id: 6.2
+    - id: b.6.2
       text: A global ranking of companies based on financial metrics like revenue, dividends, earnings, profits, PE ratio, market cap, and stock symbols.
-    - id: 6.3
+    - id: b.6.3
       text: Evaluating and ranking companies worldwide using financial indicators such as revenue, dividend yield, profits, PE ratio, and market capitalization.
-    - id: 6.4
+    - id: b.6.4
       text: Ranking international companies by various financial metrics, including revenue, dividends, earnings, and market cap, along with their stock symbols.
-    - id: 6.5
+    - id: b.6.5
       text: A comparative analysis of companies across different countries based on financial metrics such as profits, dividend yield, PE ratio, and market capitalization.
-    - id: 6.6
+    - id: b.6.6
       text: Assessing and ranking firms globally by key financial metrics like revenue, dividends, earnings, and stock performance indicators.
+
+    - id: b.7.1
+      text: revenue, dividends, earnings, and stock performance indicators.
+    - id: b.7.2
+      text: dividends, earnings
+    - id: b.7.3
+      text: PERatio, PE-ratio
+    - id: b.7.4
+      text: marketcap, market-cap
 

@@ -20,4 +20,5 @@ def show_dirs():
         selected_path = os.path.join(base_path, selected_dir)
         st.sidebar.write(f"Selected directory: *{selected_path}*")
         st.sidebar.write()
+        st.session_state['dataset_name'] = selected_dir
         force_reset_metadata(selected_path)
