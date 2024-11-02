@@ -50,6 +50,12 @@ def parseXML(llm_response:str):
     # Replace XML special chars, so parser does not FAIL.
     ###
     llm_response = llm_response.replace('&', '(##XXREPLACE_ANDXX##)')
+    llm_response = llm_response.replace('>=', '(##XXREPLACE_GEXX##)')
+    llm_response = llm_response.replace(' <= ', '(##XXREPLACE_SP_GE_SPXX##)')
+    llm_response = llm_response.replace(' \\', '(##XXREPLACE_SP_BACKSLASHXX##)')
+    llm_response = llm_response.replace(' > ', '(##XXREPLACE_SP_GT_SPXX##)')
+    llm_response = llm_response.replace(' < ', '(##XXREPLACE_SP_LT_SPXX##)')
+
     logger.debug("AFTER SPECIAL CHARACTER Replacment (&):" + llm_response)
         
     ###
@@ -105,6 +111,12 @@ def parseXML(llm_response:str):
         # Undo previous replacement - XML special chars, so parser does not FAIL.
         ###
         code_block = code_block.replace('(##XXREPLACE_ANDXX##)', '&')
+        code_block = code_block.replace('(##XXREPLACE_GEXX##)', '>=')
+        code_block = code_block.replace('(##XXREPLACE_SP_GE_SPXX##)', ' <= ')
+        code_block = code_block.replace('(##XXREPLACE_SP_BACKSLASHXX##)', ' \\')
+        code_block = code_block.replace('(##XXREPLACE_SP_GT_SPXX##)', ' > ')
+        code_block = code_block.replace('(##XXREPLACE_SP_LT_SPXX##)', ' < ')
+
         output_code_blocks.append(code_block)
 
     temp_dir = st.session_state['temp_code_dir']

@@ -1,0 +1,10 @@
+###
+# Knowledge base for the dataset  in YAML format
+# Use "c" as prefix for the IDs to maintain uniqueness
+###
+knowledge:
+  dataset_name: Diabetes
+  records:
+    # all columns
+    - id: c.1.1
+      text: diabetesDF,Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
