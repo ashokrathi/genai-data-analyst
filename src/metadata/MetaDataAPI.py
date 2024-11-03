@@ -51,6 +51,10 @@ def get_columnNamesWithDFs():
     logger.debug(f"get_columnNamesWithDFs: {list_str}")
     return list_str
 
+def get_extraCommentsToLLM():
+    metaObj = st.session_state['metadata']
+    return metaObj.get_extraCommentsToLLM()
+
 def get_full_file_name(df_name):
     metaObj = get_metadata()
     file_str = metaObj.get_filename_with_path(df_name)

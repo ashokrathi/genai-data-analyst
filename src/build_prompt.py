@@ -1,4 +1,4 @@
-from metadata.MetaDataAPI import get_columnNamesWithDFs
+from metadata.MetaDataAPI import get_columnNamesWithDFs, get_extraCommentsToLLM
 from loguru import logger
 
 from app_config import \
@@ -15,11 +15,18 @@ def build_meta_data_prompt():
     meta_data_msg = '     \n'.join([line for line in df_col_list])
     return "\n"+meta_data_msg+"\n"
 
+def build_extra_comments_prompt():
+    extra_comments = get_extraCommentsToLLM()
+    meta_data_comments = '\n'.join([line for line in extra_comments])
+    return "\n"+meta_data_comments+"\n"
+
 def build_llm_prompt(user_prompt):
     meta_data_msg = build_meta_data_prompt()
+    extra_comments = build_extra_comments_prompt()
     llm_prompt = f"{PROMPT_GOAL} {user_prompt}"
     llm_prompt += f"\n{PROMPT_DATAFRAME_HEADERMSG}"
     llm_prompt += f"\n{meta_data_msg}"
+    llm_prompt += f"\n{extra_comments}"
     llm_prompt += f"\n{PROMPT_COLORS}"
     llm_prompt += f"\n{PROMPT_CODEGEN_MSG}"
     llm_prompt += f"\n{PROMPT_XMLFORMAT_HEADERMSG}"
