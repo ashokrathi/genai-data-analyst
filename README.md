@@ -71,6 +71,7 @@ Note: This is still work-in-progress.
         Note: You should be able check Pinecone's ik-capstone Index to verify if this is initialized.        
 
 ## Run the App
+    $ cd <your_folder>/genai-data-analyst
     $ bash ./run_app.sh
 
     Note 1: You can use 'Sales' or 'World_Top_Companies' dataset. Select one of them in the App.
