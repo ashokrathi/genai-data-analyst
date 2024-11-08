@@ -18,16 +18,17 @@ Based on Text or Voice prompt, this GenAI Data Analyst tool invokes LLM to gener
 4. Model/LLM: OpenAI gpt-4o-mini
 5. Framework: LangChain
 6. VectorDB: Pinecone DB  (TBD)
-7. Speech to Text: Speech Recognition module from Google
-8. Logger: Loguru
-9. Image display: Pillow
+7. Embedding Model: text-embedding-ada-002 (Langchain's default OpenAI embedding model)
+8. Speech to Text: Speech Recognition module from Google
+9. Logger: Loguru
+10. Image display: Pillow
 
 Note: This is still work-in-progress.
 
 ## Tool Diagram
 ![Diagram for Voice-Enabled Data Analyst Tool](docs/diagram-voice-enabled-data-analyst.png)
 
-# Setup Insructions
+# Setup Instructions
 ## If you want to enable Speech2Text functionality (Optional)
     1. Install portaudio
         On Linux (as sudo):
@@ -41,6 +42,34 @@ Note: This is still work-in-progress.
 ## Install Python libraries
     $ cd <your_folder>/genai-data-analyst
     $ pip install -r requirements.txt
+
+## Setup OpenAI API Key
+    a) Create login for OpenAI, and Get **OpenAI API Key**.
+    b) This is needed to use OpenAI API to converse with GPT-4o LLM.
+        https://platform.openai.com/settings/organization/api-keys
+
+    $ export OPENAI_API_KEY="<OpenAI API Key goes here in double-quotes>"
+
+## Setup Pinecone API Key
+    a) Create login for **PineconeDB** (Vector DB), and Get it's API Key.
+    b) This is needed to use Pinecone API for updating and querying vector DB to match prompt with the correct dataset.
+        https://app.pinecone.io/organizations
+
+    $ export PINECONE_API_KEY="<Pinecone API Key goes here in double-quotes>"
+
+    c) Create Index (aka DB name), and Namespace in PineconeDB with correct dimensions size of the embeddings.
+        Index = ik-capstone
+        Namespace = meta_ds
+        Dimension = 1536             <<< This matches with the default OpenAI Embedding model we use.
+
+        Note: If you want to use different names for Index or Namespace, you need to update src/app_config.py accordingly.
+
+    d) Now you need to initialize VectorDB with dataset related Metadata.
+        $ cd <your_folder>/genai-data-analyst
+        $ bash ./load_VectorDB.sh
+
+        Note: You should be able check Pinecone's ik-capstone Index to verify if this is initialized.        
+
 ## Run the App
     $ bash ./run_app.sh
 
@@ -49,4 +78,5 @@ Note: This is still work-in-progress.
             Dataset = Sales
             Prompt = Generate bar-chart for top 5 agents by sales.
     Note 3: After you submit your prompt, you would see a new browser page for the Results showing bar-charts etc.
-    Note 4: You may see some strange interaction with the browser. Reason is Streamlit Apps are event-driven, and any change causes the entire App to run from start to finish.
+    Note 4: This behavior of using a new browser page for results is because Streamlit Apps are event-driven, and
+        any change causes the entire App to run from start to finish.
