@@ -1,5 +1,5 @@
 # GenAI-based Voice-Enabled Data Analyst (VEDA) Tool
-Based on Text or Voice prompt, this GenAI Data Analyst tool invokes LLM to generate matplotlib code to facilitate creation of bar charts and graphs for your private data.
+Based on Text or Voice prompt, this GenAI Data Analyst tool invokes LLM to generate matplotlib code to facilitate creation of bar charts and graphs for your private data. It enhances the prompt with additional context (RAG) about dataset related meta info, expected response format etc. This uses OpenAI and PineconeDB for LLM and vectorDB respectively.
 
 ## Features.
 1. Takes voice prompt or text prompt from the user.
@@ -22,8 +22,6 @@ Based on Text or Voice prompt, this GenAI Data Analyst tool invokes LLM to gener
 8. Speech to Text: Speech Recognition module from Google
 9. Logger: Loguru
 10. Image display: Pillow
-
-Note: This is still work-in-progress.
 
 ## Tool Diagram
 ![Diagram for Voice-Enabled Data Analyst Tool](docs/diagram-voice-enabled-data-analyst.png)
