@@ -2,7 +2,7 @@ import streamlit as st
 import subprocess
 from app_config import PYTHON_PROG_DIR
 from datetime import datetime
-from metadata.MetaDataAPI import get_current_dataset_name
+from metadata.MetaDataYAMLAPI import get_current_dataset_name
 import sys
 import os
 

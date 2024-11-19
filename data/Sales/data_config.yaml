@@ -1,0 +1,50 @@
+data_metainfo:
+  facts:
+    - df: salesDF
+      file: sales.csv
+      format: csv
+      desc: sales transactions
+      columns:
+        - sales_id
+        - date
+        - region_id
+        - agent_id
+        - customer_id
+        - product_id
+        - quantity
+        - unit_price
+        - amount
+  dimensions:
+    - df: regionsDF
+      file: regions.csv
+      format: csv
+      desc: regions areas zones regional
+      columns:
+        - region_id
+        - region_name
+    - df: agentsDF
+      file: agents.csv
+      format: csv
+      desc: agents reps representatives
+      columns:
+        - agent_id
+        - agent_name
+    - df: customersDF
+      file: customers.csv
+      format: csv
+      desc: customers clients
+      columns:
+        - customer_id
+        - customer_name
+    - df: productsDF
+      file: products.csv
+      format: csv
+      desc: products items
+      columns:
+        - product_id
+        - upc
+        - product_name
+  extra_comments_to_LLM:
+    - For by-month, you can extract month from the date - e.g. from 2023-03-05 you can extract 2023-03.
+    - For by-year, you can extract year from the date - e.g. from 2023-03-05, you can extract 2023.
+    - Strictly use given dataframe names and column names for PD.

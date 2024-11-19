@@ -206,4 +206,4 @@ def main(folder):
     logger.info(meta)
     
 if __name__ == "__main__":
-    main("../data/sales")
+    main("../../data/Sales")

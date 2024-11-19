@@ -1,4 +1,4 @@
-from metadata.MetaDataAPI import get_full_file_name,  get_column_list
+from metadata.MetaDataYAMLAPI import get_full_file_name,  get_column_list
 from pathlib import Path
 from loguru import logger
 

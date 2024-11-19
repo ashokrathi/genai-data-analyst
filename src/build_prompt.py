@@ -1,4 +1,4 @@
-from metadata.MetaDataAPI import get_columnNamesWithDFs, get_extraCommentsToLLM
+from metadata.MetaDataYAMLAPI import get_columnNamesWithDFs, get_extraCommentsToLLM
 from loguru import logger
 
 from app_config import \

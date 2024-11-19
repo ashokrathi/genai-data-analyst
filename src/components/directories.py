@@ -1,6 +1,6 @@
 import streamlit as st
 from app_config import DATA_DIR
-from metadata.MetaDataAPI import force_reset_metadata
+from metadata.MetaDataYAMLAPI import force_reset_metadata
 import os
 
 ####################### Display Data Directories

@@ -79,4 +79,4 @@ def main(folder):
     logger.debug(get_columnNamesWithDFs())
     
 if __name__ == "__main__":
-    main("../data/sales")
+    main("../../data/Sales")

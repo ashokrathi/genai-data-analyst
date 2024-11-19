@@ -14,7 +14,7 @@ from loguru import logger
 # Imports from the code base
 ###
 from app_config import PINECONE_INDEX, RAG_META_YAML_FILENAME, NAMESPACE_METADATA, QUALITY_THRESHOLD, DATA_DIR
-from metadata.MetaDataAPI import get_current_dataset_path
+from metadata.MetaDataYAMLAPI import get_current_dataset_path
 from vectorDB.yaml_parser import KnowledgeDataset
 
 ###############################################
