@@ -19,7 +19,7 @@ TAG_dataframe_relationship_code = 'dataframe_relationship_code'
 TAG_matplotlib_code             = 'matplotlib_code'
 xml_tags = [
     TAG_prompt_id,
-    TAG_sample_dataframe_init_code,
+#    TAG_sample_dataframe_init_code,
     TAG_list_merged_dataframes,
     TAG_dataframe_relationship_code,
     TAG_matplotlib_code

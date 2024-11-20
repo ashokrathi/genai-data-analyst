@@ -1,0 +1,20 @@
+data_metainfo:
+  facts:
+    - df: diabetesDF
+      file: diabetes.csv
+      format: csv
+      desc: Diabetes dataset
+      columns:
+        - Pregnancies
+        - Glucose
+        - BloodPressure
+        - SkinThickness
+        - Insulin
+        - BMI
+        - DiabetesPedigreeFunction
+        - Age
+        - Outcome
+  dimensions:
+  extra_comments_to_LLM:
+    - Instructions - For age groups, divide them into ages of 20-25, 25-30, 30-40, 40-50.
+    - Has diabetes if Outcome = 1, No diabetes if Outcome = 0

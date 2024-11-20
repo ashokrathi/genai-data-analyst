@@ -90,36 +90,45 @@ class MetaDataInfoDataset:
         ###
         # Parse Facts
         ###
-        for fct in data['data_metainfo']['facts']:
-            df = fct['df']
-            file = fct['file']
-            format = fct['format']
-            desc = fct['desc']
-            col_list : List[ColumnRecord] = []
-            for col in fct['columns']:          # parse columns
-                col_list.append( ColumnRecord(col) )
-            fct_rec = FactRecord(df, file, format, desc, col_list)
-            self.fact_list.append(fct_rec)
+        if data['data_metainfo']['facts']:
+            for fct in data['data_metainfo']['facts']:
+                df = fct['df']
+                file = fct['file']
+                format = fct['format']
+                desc = fct['desc']
+                col_list : List[ColumnRecord] = []
+                for col in fct['columns']:          # parse columns
+                    col_list.append( ColumnRecord(col) )
+                fct_rec = FactRecord(df, file, format, desc, col_list)
+                self.fact_list.append(fct_rec)
+        else:
+            logger.info(f"No Facts exist in dataset file = {self.full_filename}")
 
         ###
         # Parse dimensions
         ###
-        for dim in data['data_metainfo']['dimensions']:
-            df = dim['df']
-            file = dim['file']
-            format = dim['format']
-            desc = dim['desc']
-            col_list : List[ColumnRecord] = []
-            for col in dim['columns']:          # parse columns
-                col_list.append( ColumnRecord(col) )
-            dim_rec = DimensionRecord(df, file, format, desc, col_list)
-            self.dimension_list.append(dim_rec)
+        if data['data_metainfo']['dimensions']:
+            for dim in data['data_metainfo']['dimensions']:
+                df = dim['df']
+                file = dim['file']
+                format = dim['format']
+                desc = dim['desc']
+                col_list : List[ColumnRecord] = []
+                for col in dim['columns']:          # parse columns
+                    col_list.append( ColumnRecord(col) )
+                dim_rec = DimensionRecord(df, file, format, desc, col_list)
+                self.dimension_list.append(dim_rec)
+        else:
+            logger.info(f"No Dimensions exist in dataset file = {self.full_filename}")
 
         ###
         # Parse Extra comments for LLM
         ###
-        for comm in data['data_metainfo']['extra_comments_to_LLM']:
-            self.extra_comments.append(comm)
+        if data['data_metainfo']['extra_comments_to_LLM']:
+            for comm in data['data_metainfo']['extra_comments_to_LLM']:
+                self.extra_comments.append(comm)
+        else:
+            logger.info(f"No Extra Comments-To-LLM exist in dataset file = {self.full_filename}")
 
     def __init__(self, folder_path:str):
         self.filename = "data_config.yaml"

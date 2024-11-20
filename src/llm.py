@@ -31,7 +31,8 @@ def prompt_langchain(prompt_str):
     st.write(output)
 
 def prompt_openai(prompt_str):
-    model="gpt-4o-mini"
+    #model="gpt-4o-mini"
+    model="o1-mini"
 
     openai_api_key = os.getenv('OPENAI_API_KEY')
     if not openai_api_key:
@@ -45,7 +46,7 @@ def prompt_openai(prompt_str):
     response = client.chat.completions.create(
         model=model,
         messages=messages,
-        temperature=0
+        temperature=1
     )
     output = response.choices[0].message.content
     logger.debug("================ Response:================ ")
