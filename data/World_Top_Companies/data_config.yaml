@@ -1,0 +1,65 @@
+data_metainfo:
+  facts:
+    - df: dividendYieldDF
+      file: Companies_ranked_by_Dividend_Yield.csv
+      format: csv
+      desc: Dividend-yield dividend yield
+      columns:
+        - Rank
+        - Name
+        - Symbol
+        - dividend_yield_ttm
+        - price_GPB
+        - country
+    - df: earningsDF
+      file: Companies_ranked_by_Earnings.csv
+      format: csv
+      desc: Earnings Profits
+      columns:
+        - Rank
+        - Name
+        - Symbol
+        - earnings_ttm
+        - price_GPB
+        - country
+
+    - df: marketCapDF
+      file: Companies_ranked_by_Market_Cap.csv
+      format: csv
+      desc: market-cap
+      columns:
+        - Rank
+        - Name
+        - Symbol
+        - marketcap
+        - price_GPB
+        - country
+
+    - df: PE_RatioDF
+      file: Companies_ranked_by_P_E_ratio.csv
+      format: csv
+      desc: PE PE-ratio
+      columns:
+        - Rank
+        - Name
+        - Symbol
+        - pe_ratio_ttm
+        - price_GPB
+        - country
+
+    - df: revenueDF
+      file: Companies_ranked_by_Revenue.csv
+      format: csv
+      desc: revenue
+      columns:
+        - Rank
+        - Name
+        - Symbol
+        - revenue_ttm
+        - price_GPB
+        - country
+
+  dimensions:
+
+  extra_comments_to_LLM:
+#    - Use given mapping between,Dataframe and columns.

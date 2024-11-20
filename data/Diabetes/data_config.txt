@@ -1,4 +1,0 @@
-[Facts],diabetesDF,diabetes.csv,"sales transactions"
-[Columns],diabetesDF,Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
-[ExtraCommentsToLLM],For age groups, use age 20-25, 25-30, 30-40, 40-50.
-#[ExtraCommentsToLLM],Strictly use given dataframe names and column names for PD.
